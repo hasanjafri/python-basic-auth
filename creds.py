@@ -1,0 +1,1 @@
+admin = {'nemo-admin': 'authpwservice'}

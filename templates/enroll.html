@@ -1,0 +1,30 @@
+<html>
+  <head>
+    <title>Nemo Admin Enrollment Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{{url_for('static', filename='bootstrap.min.css')}}" rel="stylesheet" media="screen">
+  </head>
+  <body>
+    <div class="container">
+      <h1>Enroll New Demoer</h1>
+      <br>
+      <form action="" method="post">
+        <input type="text" placeholder="Username" name="username" value="{{
+          request.form.username }}">
+        <input type="text" placeholder="Password" name="password" value="{{
+          request.form.password }}">
+        <input type="text" placeholder="Household_ID" name="household_id" value="{{
+          request.form.household_id }}">
+        <input type="text" placeholder="Container_URL" name="container_url" value="{{
+          request.form.container_url }}">
+        <input class="btn btn-default" type="submit" value="Enroll">
+      </form>
+      {% if error %}
+        <p class="error"><strong>Error:</strong> {{ error }}
+      {% endif %}
+      {% if response %}
+      <p class="error"><strong>Response:</strong> {{ response }}
+      {% endif %}
+    </div>
+  </body>
+</html>

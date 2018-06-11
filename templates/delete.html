@@ -1,0 +1,24 @@
+<html>
+  <head>
+    <title>Nemo Admin Delete Demoer Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{{url_for('static', filename='bootstrap.min.css')}}" rel="stylesheet" media="screen">
+  </head>
+  <body>
+    <div class="container">
+      <h1>Delete Demoer</h1>
+      <br>
+      <form action="" method="post">
+        <input type="text" placeholder="Username" name="username" value="{{
+          request.form.username }}">
+        <input class="btn btn-default" type="submit" value="Delete">
+      </form>
+      {% if error %}
+        <p class="error"><strong>Error:</strong> {{ error }}
+      {% endif %}
+      {% if response %}
+      <p class="error"><strong>Response:</strong> {{ response }}
+      {% endif %}
+    </div>
+  </body>
+</html>
